@@ -1,0 +1,3035 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY swrla "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#"
+     xml:base="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="&swrla;isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity_Object_Property -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity_Object_Property"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_LocateNear -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_LocateNear">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Relation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Relation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#BelongTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#BelongTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Relation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_Schema"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Bill_Relation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Bill_Relation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building_Object_Property -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building_Object_Property"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#CalendarHasActivity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#CalendarHasActivity">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Calendar"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Calendar_Relations"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Calendar_Relations -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Calendar_Relations"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Co_MeasuredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Co_MeasuredBy">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Co2_Sensor"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Environment_Paramaters_Object_Property"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Environment_Parameters"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#ConectedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#ConectedTo">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#LocateNearTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Awareness_Object_Property -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Awareness_Object_Property"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Model_Relation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Model_Relation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Awareness_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_Relation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_Relation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Schema_Relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Schema_Relation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Schema_Relation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Awareness_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Contexy_Acquisition_Relation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Contexy_Acquisition_Relation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Schema_Relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#CurrentActivity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#CurrentActivity">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#DoneIn_Place -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#DoneIn_Place">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity_Object_Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Energy_Source_Object_Property -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Energy_Source_Object_Property"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Environment_Paramaters_Object_Property -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Environment_Paramaters_Object_Property"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasAbility -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasAbility">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Ability"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Profile"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Profile_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasAction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasAction">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Action"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasAppliance -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasAppliance">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasBegin_Time -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasBegin_Time">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity_Object_Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Time"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasBehavior -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasBehavior">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Behaviors"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Profile"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Profile_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasBill -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasBill">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Bill"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasConditionOutPut -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasConditionOutPut">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Profile_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasCondition_Effect -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasCondition_Effect">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Conditional_Effect"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Profile_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasContact -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasContact">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Contact"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Profile"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Profile_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasContext -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasContext">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building_Object_Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context-Awareness"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasContextType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasContextType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Acquisition_Schema"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Type"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Contexy_Acquisition_Relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasEnd_Time -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasEnd_Time">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity_Object_Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Time"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasEnergySource -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasEnergySource">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building_Object_Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Energy_Source"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasEnvironment_Paramaters -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasEnvironment_Paramaters">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Environment_Parameters"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasEvent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasEvent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building_Object_Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasFather -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasFather">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasHealthState -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasHealthState">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Health_State"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Profile"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Profile_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasIdentify -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasIdentify">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Profile"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Profile_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasInput -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasInput">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Input_Service"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Profile_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasInterest -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasInterest">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Profile"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Interest"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Profile_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasLocation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasLocation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building_Object_Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasMother -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasMother">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasNetworkProtocol -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasNetworkProtocol">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Relation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Network"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasOutput -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasOutput">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Output_Service"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Profile_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasOwncome -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasOwncome">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity_Object_Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasParamaters -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasParamaters">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Paramater_Service"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Profile_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasPhysicalObject -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasPhysicalObject">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasPlace -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasPlace">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building_Object_Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasPrecondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasPrecondition">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Precondition"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Profile_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasPrefence -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasPrefence">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Profile"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Profile_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasProfile -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasProfile">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building_Object_Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building_Profile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasProperties -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasProperties">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Energy_Source_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasProvider -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasProvider">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Energy_Source_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasPsychologicalState -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasPsychologicalState">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Profile"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Profile_Object_Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Psychological_State"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasQoc -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasQoc">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Acquisition_Schema"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Contexy_Acquisition_Relation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Quality_Of_Context"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasRequirement -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasRequirement">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building_Object_Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Requirement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasRole">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Profile"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Profile_Object_Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasServiceProfile -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasServiceProfile">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Object_Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Profile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasService_Model -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasService_Model">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Model"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasService_Type -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasService_Type">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Object_Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasSkills -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasSkills">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Profile"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Profile_Object_Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Skills"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasSoftware -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasSoftware">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasState -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasState">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Profile"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Profile_Object_Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#State"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasSubActivity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasSubActivity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Acquisition_Schema"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Contexy_Acquisition_Relation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Time"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasType">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Energy_Source_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Has_Begining -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Has_Begining">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Interval_Time"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Interval_Time_Object_Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Time"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Has_Context_Acquisition_Schema -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Has_Context_Acquisition_Schema">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Acquisition_Schema"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_Relation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_Schema"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Has_Context_Level -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Has_Context_Level">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Level"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_Relation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_Schema"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Has_Context_Modelling_Schema -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Has_Context_Modelling_Schema">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_Relation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_Schema"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_Schema"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Has_Context_Schema -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Has_Context_Schema">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Model"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Model_Relation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_Schema"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Has_Context_State -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Has_Context_State">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_Relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Has_Duration -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Has_Duration">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Interval_Time"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Interval_Time_Object_Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Time"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Has_What -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Has_What">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_Relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Has_Where -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Has_Where">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_Relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Has_Who -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Has_Who">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_Relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Hascalendar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Hascalendar">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Calendar"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Profile"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Profile_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HumanHasPlace -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HumanHasPlace">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Object_Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HumanHasProfile -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HumanHasProfile">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Object_Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Profile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_LocateInPlace -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_LocateInPlace">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Object_Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Object_Property -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Object_Property"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Humi_MeasuredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Humi_MeasuredBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Environment_Paramaters_Object_Property"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Environment_Parameters"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Humidity_sensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Interval_Time_Object_Property -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Interval_Time_Object_Property"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#LocateInPlace -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#LocateInPlace">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Relation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#LocateNearTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#LocateNearTo">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Actor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Relation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Device"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Zone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Lumi_MeasuredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Lumi_MeasuredBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Environment_Paramaters_Object_Property"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Environment_Parameters"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Luminance_sensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Modeling_HasQoc -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Modeling_HasQoc">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_Relation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_Schema"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Quality_Of_Context"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Modeling_Has_Time -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Modeling_Has_Time">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_Relation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_Schema"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Time"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Modeling_Has_time -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Modeling_Has_time">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Model"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Model_Relation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Time"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Need_Service -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Need_Service">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Noise_MeasuredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Noise_MeasuredBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Environment_Paramaters_Object_Property"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Environment_Parameters"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Noise_Sensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#OwnAppliance -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#OwnAppliance">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Consume_Energy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Profile"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Profile_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#OwnBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#OwnBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building_Object_Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Individual_Actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#OwnByHuman -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#OwnByHuman">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Actor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#OwnPlace -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#OwnPlace">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Profile"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Profile_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#PlaceOwnBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#PlaceOwnBy">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Actor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place_Object_Property -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place_Object_Property"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Profile_Object_Property -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Profile_Object_Property"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Provide_Service -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Provide_Service">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Relation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_HasRequirement -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_HasRequirement">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Requirement"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Object_Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Object_Property -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Object_Property"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Profile_Object_Property -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Profile_Object_Property"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Temp_MeasuredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Temp_MeasuredBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Environment_Paramaters_Object_Property"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Environment_Parameters"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Temperature_sensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#UseAppliance -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#UseAppliance">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity_Object_Property"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Acquisition_Time -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Acquisition_Time">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Acquisition_Schema_Property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity_Description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity_Description">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity_Property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity_ID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity_ID">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity_Property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity_Name">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity_Property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity_Property -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity_Property"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity_Type">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity_Property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Age -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Age">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_ID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_ID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Property"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Property"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Property -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Property"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_State -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_State">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Property"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Type">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Property"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Value -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Value">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Property"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Apt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Apt">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Acquisition_Schema"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Acquisition_Schema_Property"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Bill_Property -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Bill_Property"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Bill_Time -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Bill_Time">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Bill"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Bill_Property"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Birthday -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Birthday">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building_ID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building_ID">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building_Property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building_Property -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building_Property"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#CA -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#CA">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Acquisition_Schema"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Acquisition_Schema_Property"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Acquisition_Schema_Property -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Acquisition_Schema_Property">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Awareness_Property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Aquisition_ID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Aquisition_ID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Acquisition_Schema"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Acquisition_Schema_Property"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Aquisition_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Aquisition_Name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Acquisition_Schema"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Acquisition_Schema_Property"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Awareness_Property -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Awareness_Property"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Level_Degree -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Level_Degree">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Level"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Level_Property"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Level_Process -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Level_Process">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Level"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Level_Property"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Level_Property -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Level_Property">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Awareness_Property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Model_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Model_Name">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Model_Property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Model_Property -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Model_Property">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Awareness_Property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_ID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_ID">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_Property"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_Schema"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_Name">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_Property"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_Schema"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_Property -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_Property">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Awareness_Property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_State_Property -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_State_Property">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Awareness_Property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Csbt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Csbt">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Acquisition_Schema"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Acquisition_Schema_Property"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Data_precision -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Data_precision">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Quality_Of_Context"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Quality_Of_Context_Property"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Data_up-to-datedness -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Data_up-to-datedness">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Quality_Of_Context"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Quality_Of_Context_Property"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Data_validity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Data_validity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Quality_Of_Context"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Quality_Of_Context_Property"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Day -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Day">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Time_Description"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Energy_Source_Data_Type_Property -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Energy_Source_Data_Type_Property"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Energy_consumption_level -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Energy_consumption_level">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Quality_Of_Context"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Quality_Of_Context_Property"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Environment_Paramater -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Environment_Paramater"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Fbt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Fbt">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Acquisition_Schema"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Acquisition_Schema_Property"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#First_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#First_Name">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Gender -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Gender">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasEnergyConsumption -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasEnergyConsumption">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Property"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasPower -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasPower">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Consume_Energy"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Property"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasStartRunTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HasStartRunTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Property"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Hieght -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Hieght">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Hour -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Hour">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Time_Description"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Property -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Property"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Inhabitant_feedback -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Inhabitant_feedback">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Quality_Of_Context"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Quality_Of_Context_Property"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Last_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Last_Name">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Maximum_Consumption_of_Place -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Maximum_Consumption_of_Place">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Policy_Data_Type_Property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Minute -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Minute">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Time_Description"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Number_of_occurrences_in_history -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Number_of_occurrences_in_history">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Quality_Of_Context"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Quality_Of_Context_Property"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Physical_Property -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Physical_Property">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building_Property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place_AreaSize -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place_AreaSize">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place_Property"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place_ID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place_ID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place_Property"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place_Name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place_Property"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place_Property -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place_Property"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Policy_Data_Type_Property -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Policy_Data_Type_Property"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Qod -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Qod">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Acquisition_Schema"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Acquisition_Schema_Property"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Quality_Of_Context_Property -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Quality_Of_Context_Property">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Awareness_Property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Quality_of_the_context_data -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Quality_of_the_context_data">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Quality_Of_Context"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Quality_Of_Context_Property"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Quality_of_the_delivery_process -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Quality_of_the_delivery_process">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Quality_Of_Context"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Quality_Of_Context_Property"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Rbt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Rbt">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Acquisition_Schema"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Acquisition_Schema_Property"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Room_Number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Room_Number">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building_Property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Second -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Second">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Time_Description"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Thermal_Property -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Thermal_Property">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building_Property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Time_Description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Time_Description"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#VL -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#VL">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Acquisition_Schema"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Acquisition_Schema_Property"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Weight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Weight">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Year -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Year">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Time_Description"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#hasEnergyBill -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#hasEnergyBill">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Bill"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Bill_Property"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#production_Energy_Quantity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#production_Energy_Quantity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Energy_Source"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Energy_Source_Data_Type_Property"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Ability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Ability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Profile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Access_Control -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Access_Control">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Action"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Actor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Actor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Actuator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Actuator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Consume_Energy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Air-Conditioned -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Air-Conditioned">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#CoolingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Consume_Energy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Consume_Energy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#AtticFan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#AtticFan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#CoolingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Automobile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Automobile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Backyard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Backyard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#OutDoor_Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Bathroom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Bathroom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Indoor_Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Battery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Battery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Green_Energy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Bedroom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Bedroom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Indoor_Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Behaviors -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Behaviors"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Bicycle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Bicycle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Bill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Bill"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Bodycare_Appliance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Bodycare_Appliance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Consume_Energy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building_Profile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Building_Profile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Profile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#CDPlayer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#CDPlayer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Media_Appliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Calendar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Calendar"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Call -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Call">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Notification_Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Camera -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Camera">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Security_Appliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Cammand_Action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Cammand_Action">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Category_Behaviors -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Category_Behaviors">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Behaviors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#CeilingFan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#CeilingFan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#CoolingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Cleaning_Appliance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Cleaning_Appliance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Consume_Energy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Climate_Appliance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Climate_Appliance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Consume_Energy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Climate_Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Climate_Service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Cloud_Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Cloud_Service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Co2_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Co2_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Common_Behaviors -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Common_Behaviors">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Behaviors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Conditional_Effect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Conditional_Effect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Profile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Contact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Contact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Profile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Contaminated_Source -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Contaminated_Source">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Energy_Source"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context-Awareness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context-Awareness"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Acquisition_Schema -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Acquisition_Schema">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Schemes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Attribute -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Attribute">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context-Awareness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Level -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Level">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context-Awareness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Life_Cycle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Life_Cycle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context-Awareness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Model -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Model">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context-Awareness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_Schema -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Modeling_Schema">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Schemes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Schemes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Schemes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context-Awareness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_State -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_State">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context-Awareness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context_Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context-Awareness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Cooking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Cooking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Inferred_Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#CoolingDevice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#CoolingDevice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Climate_Appliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Device -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Device">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Device_Produce_Energy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Device_Produce_Energy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Diningroom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Diningroom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Indoor_Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Dinner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Dinner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Schedulet_Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Dishwasher -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Dishwasher">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#KetchinDevices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#DoorLock -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#DoorLock">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Security_Appliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Dooryard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Dooryard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#OutDoor_Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#ElectricWaterBoiler -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#ElectricWaterBoiler">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#KetchinDevices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Electricity_Generator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Electricity_Generator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#contaminated_Energy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Email -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Email">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Notification_Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Emergency_Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Emergency_Service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Energy_Source -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Energy_Source">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Source"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Energy_metering_sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Energy_metering_sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Entertaining -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Entertaining">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Inferred_Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Environment_Parameters -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Environment_Parameters"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Event"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Family -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Family">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Gourp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Friends -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Friends">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Gourp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Gas_Source -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Gas_Source">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Source"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Gourp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Gourp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Green_Energy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Green_Energy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Device_Produce_Energy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Green_Source -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Green_Source">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Energy_Source"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Grid_Source -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Grid_Source">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Energy_Source"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Health_State -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Health_State">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#State"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HeatingDevice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HeatingDevice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Climate_Appliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HomeWork -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HomeWork">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Inferred_Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Individual_Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Profile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Profile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Profile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Humidity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Humidity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Environment_Parameters"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Humidity_sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Humidity_sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Individual_Actor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Individual_Actor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Indoor_Place -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Indoor_Place">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Inferred_Activity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Inferred_Activity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Information_Supply_Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Information_Supply_Service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Input_Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Input_Service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Profile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Instant_Time -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Instant_Time">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Temporal_Time"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Interest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Interest">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Profile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Interval_Time -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Interval_Time">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Temporal_Time"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#KetchinDevices -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#KetchinDevices">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Consume_Energy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Kidroom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Kidroom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Indoor_Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Kitchen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Kitchen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Indoor_Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Landing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Landing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Indoor_Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Light -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Light">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Consume_Energy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Listening_To_Music -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Listening_To_Music">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Inferred_Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Livingroom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Livingroom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Indoor_Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Location"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Luiminance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Luiminance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Environment_Parameters"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Luminance_sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Luminance_sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Media_Appliance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Media_Appliance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Consume_Energy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Media_Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Media_Service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Metting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Metting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Schedulet_Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Mission_Robot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Mission_Robot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Non-Human"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Motion_sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Motion_sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Motocycle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Motocycle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Network -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Network"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Network_Appliance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Network_Appliance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Consume_Energy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Noise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Noise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Environment_Parameters"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Noise_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Noise_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Non-Human -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Non-Human">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Individual_Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Notification_Action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Notification_Action">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Notify_Software -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Notify_Software">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Notification_Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#OutDoor_Place -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#OutDoor_Place">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Outcomes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Outcomes"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Output_Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Output_Service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Profile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Oven -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Oven">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#KetchinDevices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Paramater_Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Paramater_Service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Profile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Party -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Party">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Schedulet_Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Patio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Patio">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Indoor_Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#PatioHeater -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#PatioHeater">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#HeatingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Pet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Pet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Non-Human"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Place">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Zone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Policy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Policy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Policy_Profile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Policy_Profile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Profile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Praying -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Praying">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Schedulet_Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Precondition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Precondition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Profile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Profile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Profile"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Property -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Property">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Profile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Proximity_sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Proximity_sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Psychological_State -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Psychological_State">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#State"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Quality_Of_Context -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Quality_Of_Context">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Context-Awareness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#RFID-Tag_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#RFID-Tag_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Reading -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Reading">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Inferred_Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Refrigerators -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Refrigerators">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#KetchinDevices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Requirement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Requirement"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Role -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Role">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Profile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Room -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Room">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Indoor_Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#SMS_Notification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#SMS_Notification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Notification_Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Schedulet_Activity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Schedulet_Activity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Security_Appliance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Security_Appliance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Consume_Energy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Consume_Energy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Grounding -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Grounding">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Model -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Model">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Profile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Profile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Profile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service_Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Showering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Showering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Inferred_Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Site_Profile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Site_Profile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Profile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Skills -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Skills">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Profile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Smoke_sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Smoke_sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Software_Agent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Software_Agent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Non-Human"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Solar_Panels -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Solar_Panels">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Green_Energy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Source -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Source"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#State -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#State">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Human_Profile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#StoreRoom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#StoreRoom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Indoor_Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Stove -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Stove">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#KetchinDevices"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Supervising -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Supervising">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Inferred_Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Switches -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Switches">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Appliance_Consume_Energy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#SystemTime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#SystemTime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Time"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Temperature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Temperature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Environment_Parameters"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Temperature_sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Temperature_sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Temporal_Time -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Temporal_Time">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Time"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Time -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Time"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Turn_Off -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Turn_Off">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Turn_On -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Turn_On">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Tv -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Tv">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Media_Appliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Update_Value -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Update_Value">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Vehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Vehicle"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Watching_Tv -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Watching_Tv">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Inferred_Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Water_Source -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Water_Source">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Source"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Wc -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Wc">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Indoor_Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Windmills -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Windmills">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Green_Energy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#WindowFan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#WindowFan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#CoolingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Window_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Window_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Zone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Zone"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#contaminated_Energy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#contaminated_Energy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#Device_Produce_Energy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#gas_turbine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#gas_turbine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB#contaminated_Energy"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

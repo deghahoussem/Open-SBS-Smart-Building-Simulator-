@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1538037354278" name="http://www.semanticweb.org/pc/ontologies/2018/4/Onto-SB" uri="OpenSBS.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1538037354278" name="duplicate:http://www.Smart-Home-GIS.com/Ontology-Smart-Home1.0.0.owl" uri="SmartHomeGIS.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1538037354278" name="duplicate:http://www.Smart-Home-GIS.com/Ontology-Smart-Home1.0.0.owl" uri="SmartHomeGIS2.owl"/>
+    </group>
+</catalog>

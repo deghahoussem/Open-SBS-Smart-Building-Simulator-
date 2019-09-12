@@ -1,0 +1,209 @@
+File
+Individuals
+Simulator
+Rules Engen
+Help
+-------------------------------------
+New Simulator
+Save
+Import
+Exit
+-------------------------------------
+choose a Map
+Create
+delete
+edit
+show
+-----------------------------------
+import scenario
+create senario
+execute senario
+show senario result
+-----------------------------------
+Turn on
+Turn off
+Edit Rules Engine
+Create rule
+delete rule
+-----------------------------------
+About GIS
+About DzSoft
+-----------------------------------
+Maps
+individuals
+scenarios
+Select
+Green Intelligent System
+Simultor
+Start
+Stop
+Stats
+Settings
+show Ontology
+About GIS
+Home Map 1
+Home Map 2
+Home Map 3
+Home Maps
+Home zone
+Simulator
+-------------------------------------
+bedroom
+livingroom
+bathroom
+kitchen
+diningroom
+hall
+room
+garage
+landing
+patio
+wc
+wall
+Create things
+choose type of thing
+--------------------------
+Actors
+Group
+Family
+Individ
+Human
+Grandmother
+Grandfather
+Mother
+Father
+Sister
+Brother
+NonHuman
+Pets
+Dogs
+Cats
+Robot
+missionRobot
+Devices
+DeviceConsumeEnergy
+AudioAndVideo
+BodyCare
+CleaningDevices
+Counters
+KetchinDevices
+Lights
+Media
+NetworkCoordinations
+Security
+Sensors
+Switches
+WeatherDevices
+DeviceProductEnergy
+contaminated_Energy
+Electricity_Generator
+gas_turbine
+Green_Energy
+Solar_Panels
+Windmills
+-------------------------------------------
+Liste of things
+Name of
+Create
+Owners zone
+Create Activitys :
+Name :
+Descreption :
+Type :
+Time :
+Liste of devices :
+hours :
+Mins :
+Device name :
+consuming kw/h :
+Protocol :
+stat :
+values :
+Zone Location :
+-----------------------------------
+CDPlayer
+---------
+HairDryer
+HairIron
+MicrowaveOven
+--------------
+CentralVacuumCleaner
+RoboticVacuumCleaner
+ThorWashingMachine
+VacuumCleaner
+WashingMachine
+-----------------
+ElectricityCounter
+------------
+Dishwasher
+ElectricWaterBoiler
+----
+-----
+Oven
+Refrigerators
+Stove
+-----------------
+Lights
+-----------------
+phone
+television
+-----------------
+Hub
+Router
+-----------------
+Camera
+----------------
+Light_sensors
+MovingSensor
+RainSensor
+SmokeSensor
+TemperatureSensor
+WindSensor
+----------------
+Switches
+----------
+Cooling
+AirConditioner
+AtticFan
+CeilingFan
+WindowFan
+---------------
+Heating
+PatioHeater
+-----------------
+Create Scenario
+Actor :
+Zone :
+Activity :
+Create movments
+Turn Devices On :
+Turn Devices Off :
+shoose Devices
+Sun Light
+temperature
+Duration of scenario
+Scenario items
+Grid Energy
+--------------------------
+The Map has been added Secsesfully
+the device has been created
+the Actor as been created
+the simulation has been started
+there are no Enough Energy to Turn On the :
+The device is turned On
+The device is turned OFF
+Delete Things
+Edit Thins
+Find Things
+Delete
+Select Things you want to delete :
+Select Thing you want to Edit :
+Edit
+Select Things :
+Results
+------------------------
+CO2_Sensor
+Energy_Metering_Sensor
+Noise_Sensor
+Proximity_Sensor
+RFID_Tag_Sensor

@@ -1,0 +1,2421 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:sqwrl="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#"
+    xmlns="http://www.Smart-Home-GIS.com/Ontology-Smart-Home1.0.0.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+  xml:base="http://www.Smart-Home-GIS.com/Ontology-Smart-Home1.0.0.owl">
+  <owl:Ontology rdf:about="">
+  </owl:Ontology>
+  <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+  <owl:Class rdf:ID="Boredom">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="State"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Environment">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Zone"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Time"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Service"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Human"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Home"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Events"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="LevingRoom">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="wc"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="room"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="IndoorSpace"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Router">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="NetworkCoordinations"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GreenSources">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="EnergySources"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Refrigerators">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Stove"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="KetchinDevices"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Metting">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="SchedulerActivity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Winds">
+    <rdfs:subClassOf rdf:resource="#GreenSources"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Service">
+    <owl:disjointWith rdf:resource="#Zone"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Time"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Bathroom">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="DenningRoom"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="KidsRoom"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#wc"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Bedroom"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Landing"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#room"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#LevingRoom"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#IndoorSpace"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#IndoorSpace">
+    <rdfs:subClassOf rdf:resource="#Zone"/>
+  </owl:Class>
+  <owl:Class rdf:about="#KetchinDevices">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="DeviceConsumeEnergy"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Windmills">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Green_Energy"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="SmokeSensor">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="WindSensor"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="TemperatureSensor"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Sensors"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Solar_Panels">
+    <owl:disjointWith rdf:resource="#Windmills"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Green_Energy"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="AirConditioner">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Cooling"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="EnvironmentLight">
+    <rdfs:subClassOf rdf:resource="#Environment"/>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="EnvironmentTemperature"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="MovingSensor">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Sensors"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#WindSensor"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#TemperatureSensor"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#SmokeSensor"/>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="RainSensor"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Devices">
+    <owl:disjointWith rdf:resource="#Zone"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Time"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Service"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Human"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Home"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Events"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Environment"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Counters">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#DeviceConsumeEnergy"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Security"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="BodyCare"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="WeatherDevices"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#NetworkCoordinations"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#KetchinDevices"/>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Media"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Switches"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Others"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Sensors"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="CleaningDevices"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Lights"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#Home">
+    <owl:disjointWith rdf:resource="#Zone"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Time"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Service"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Human"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="CategoriseBehavior">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="CommonBehaviors"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Behaviors"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Supervising">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="InferredActivity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Patio">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#DenningRoom"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#KidsRoom"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Bedroom"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#room"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Bathroom"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Landing"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#LevingRoom"/>
+    <rdfs:subClassOf rdf:resource="#IndoorSpace"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#wc"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Joyfulness">
+    <rdfs:subClassOf rdf:resource="#State"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Battery">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Green_Energy"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ElectricGrid">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ContaminatedSources"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#SchedulerActivity">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Activity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ThorWashingMachine">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CleaningDevices"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="WashingMachine"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="VacuumCleaner"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#VacuumCleaner">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#WashingMachine"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CleaningDevices"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Landing">
+    <rdfs:subClassOf rdf:resource="#IndoorSpace"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#wc"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#room"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#LevingRoom"/>
+  </owl:Class>
+  <owl:Class rdf:ID="DeviceProductEnergy">
+    <rdfs:subClassOf rdf:resource="#Devices"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ListeningToMusic">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#InferredActivity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Party">
+    <rdfs:subClassOf rdf:resource="#SchedulerActivity"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Security">
+    <owl:disjointWith rdf:resource="#KetchinDevices"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#BodyCare"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#CleaningDevices"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#WeatherDevices"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Switches"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Sensors"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#DeviceConsumeEnergy"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Green_Energy">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="contaminated_Energy"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#DeviceProductEnergy"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Family">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Group"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="AtticFan">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Cooling"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#AirConditioner"/>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="WindowFan"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="PatioHeater"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="CeilingFan"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="NonHuman">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Individ"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#DenningRoom">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#wc"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#room"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#LevingRoom"/>
+    <owl:disjointWith rdf:resource="#Landing"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#KidsRoom"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#IndoorSpace"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Restlessness">
+    <rdfs:subClassOf rdf:resource="#State"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Behaviors">
+    <owl:disjointWith rdf:resource="#Zone"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Time"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Service"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Human"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Home"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Events"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Environment"/>
+    <owl:disjointWith rdf:resource="#Devices"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Disgust">
+    <rdfs:subClassOf rdf:resource="#State"/>
+  </owl:Class>
+  <owl:Class rdf:ID="TurnOff">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="CommandsActions"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Dinner">
+    <rdfs:subClassOf rdf:resource="#SchedulerActivity"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Human">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Individ"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Zone"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Time"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Service"/>
+  </owl:Class>
+  <owl:Class rdf:ID="AudioAndVideo">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#DeviceConsumeEnergy"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="gas_turbine">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#contaminated_Energy"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#PatioHeater">
+    <owl:disjointWith rdf:resource="#AirConditioner"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#WindowFan"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Heating"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Switches">
+    <owl:disjointWith rdf:resource="#KetchinDevices"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#BodyCare"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#CleaningDevices"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#WeatherDevices"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#DeviceConsumeEnergy"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Kitchen">
+    <owl:disjointWith rdf:resource="#DenningRoom"/>
+    <owl:disjointWith rdf:resource="#Patio"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#room"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Bathroom"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#wc"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Bedroom"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Landing"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#KidsRoom"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#LevingRoom"/>
+    <rdfs:subClassOf rdf:resource="#IndoorSpace"/>
+  </owl:Class>
+  <owl:Class rdf:about="#CommonBehaviors">
+    <rdfs:subClassOf rdf:resource="#Behaviors"/>
+  </owl:Class>
+  <owl:Class rdf:ID="NotificationActions">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Actions"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="CallPhone">
+    <rdfs:subClassOf rdf:resource="#NotificationActions"/>
+  </owl:Class>
+  <owl:Class rdf:about="#EnvironmentTemperature">
+    <rdfs:subClassOf rdf:resource="#Environment"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Showering">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#InferredActivity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ElectricityCounter">
+    <rdfs:subClassOf rdf:resource="#Counters"/>
+  </owl:Class>
+  <owl:Class rdf:about="#room">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#wc"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#IndoorSpace"/>
+  </owl:Class>
+  <owl:Class rdf:ID="UpdareValouse">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CommandsActions"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Light_sensors">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Sensors"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#WindSensor"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#TemperatureSensor"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#SmokeSensor"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#RainSensor"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#MovingSensor"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Camera">
+    <rdfs:subClassOf rdf:resource="#Security"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Reading">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#InferredActivity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#WindowFan">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Cooling"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#AirConditioner"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Hub">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#NetworkCoordinations"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Router"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ContaminatedSources">
+    <rdfs:subClassOf rdf:resource="#EnergySources"/>
+  </owl:Class>
+  <owl:Class rdf:about="#WeatherDevices">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#DeviceConsumeEnergy"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#KetchinDevices"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#BodyCare"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#CleaningDevices"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#Others">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#DeviceConsumeEnergy"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#KetchinDevices"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#BodyCare"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#CleaningDevices"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#WeatherDevices"/>
+    <owl:disjointWith rdf:resource="#Switches"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Sensors"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Security"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Surprise">
+    <rdfs:subClassOf rdf:resource="#State"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SendSms">
+    <rdfs:subClassOf rdf:resource="#NotificationActions"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Group">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Actors"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Outdoorspace">
+    <rdfs:subClassOf rdf:resource="#Zone"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SendEmail">
+    <rdfs:subClassOf rdf:resource="#NotificationActions"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Sadness">
+    <rdfs:subClassOf rdf:resource="#State"/>
+  </owl:Class>
+  <owl:Class rdf:about="#TemperatureSensor">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Sensors"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#WindSensor"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#Media">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#CleaningDevices"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Others"/>
+    <owl:disjointWith rdf:resource="#Switches"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#BodyCare"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Sensors"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#KetchinDevices"/>
+    <owl:disjointWith rdf:resource="#WeatherDevices"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#NetworkCoordinations"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Security"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#DeviceConsumeEnergy"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Actions">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Time"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Activity"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Zone"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Events"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Environment"/>
+    <owl:disjointWith rdf:resource="#Behaviors"/>
+    <owl:disjointWith rdf:resource="#Service"/>
+    <owl:disjointWith rdf:resource="#Devices"/>
+    <owl:disjointWith rdf:resource="#Human"/>
+    <owl:disjointWith rdf:resource="#Home"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SunLight">
+    <rdfs:subClassOf rdf:resource="#GreenSources"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Bills"/>
+  <owl:Class rdf:ID="ElectricWaterBoiler">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Stove"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Refrigerators"/>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Oven"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#KetchinDevices"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Cooking">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#InferredActivity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="SupervisorRobot">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Robot"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Hall">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#KidsRoom"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Kitchen"/>
+    <owl:disjointWith rdf:resource="#Patio"/>
+    <owl:disjointWith rdf:resource="#LevingRoom"/>
+    <owl:disjointWith rdf:resource="#Bathroom"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#wc"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#DenningRoom"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Bedroom"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#room"/>
+    <rdfs:subClassOf rdf:resource="#IndoorSpace"/>
+    <owl:disjointWith rdf:resource="#Landing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Electricity_Generator">
+    <owl:disjointWith rdf:resource="#gas_turbine"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#contaminated_Energy"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="RoboticVacuumCleaner">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#WashingMachine"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#VacuumCleaner"/>
+    <owl:disjointWith rdf:resource="#ThorWashingMachine"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CleaningDevices"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Heating">
+    <rdfs:subClassOf rdf:resource="#WeatherDevices"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Garage">
+    <rdfs:subClassOf rdf:resource="#IndoorSpace"/>
+  </owl:Class>
+  <owl:Class rdf:about="#InferredActivity">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Activity"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#SchedulerActivity"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Individ">
+    <rdfs:subClassOf rdf:resource="#Actors"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Worry">
+    <rdfs:subClassOf rdf:resource="#State"/>
+  </owl:Class>
+  <owl:Class rdf:ID="MissionRobot">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Robot"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Cooling">
+    <rdfs:subClassOf rdf:resource="#WeatherDevices"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Lights">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#CleaningDevices"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#NetworkCoordinations"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#WeatherDevices"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#DeviceConsumeEnergy"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Sensors"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#BodyCare"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Security"/>
+    <owl:disjointWith rdf:resource="#Switches"/>
+    <owl:disjointWith rdf:resource="#Media"/>
+    <owl:disjointWith rdf:resource="#KetchinDevices"/>
+    <owl:disjointWith rdf:resource="#Others"/>
+  </owl:Class>
+  <owl:Class rdf:ID="TurnOn">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CommandsActions"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="HairDryer">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#BodyCare"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="MicrowaveOven"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="HairIron"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#contaminated_Energy">
+    <rdfs:subClassOf rdf:resource="#DeviceProductEnergy"/>
+  </owl:Class>
+  <owl:Class rdf:ID="television">
+    <rdfs:subClassOf rdf:resource="#Media"/>
+  </owl:Class>
+  <owl:Class rdf:ID="CDPlayer">
+    <rdfs:subClassOf rdf:resource="#AudioAndVideo"/>
+  </owl:Class>
+  <owl:Class rdf:about="#CommandsActions">
+    <rdfs:subClassOf rdf:resource="#Actions"/>
+  </owl:Class>
+  <owl:Class rdf:about="#wc">
+    <rdfs:subClassOf rdf:resource="#IndoorSpace"/>
+  </owl:Class>
+  <owl:Class rdf:about="#HairIron">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#MicrowaveOven"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#BodyCare"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Oven">
+    <rdfs:subClassOf rdf:resource="#KetchinDevices"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Stove"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Refrigerators"/>
+  </owl:Class>
+  <owl:Class rdf:ID="phone">
+    <rdfs:subClassOf rdf:resource="#Media"/>
+    <owl:disjointWith rdf:resource="#television"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Stove">
+    <rdfs:subClassOf rdf:resource="#KetchinDevices"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Pets">
+    <rdfs:subClassOf rdf:resource="#NonHuman"/>
+  </owl:Class>
+  <owl:Class rdf:about="#WindSensor">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Sensors"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Sensors">
+    <owl:disjointWith rdf:resource="#KetchinDevices"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#BodyCare"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#CleaningDevices"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#WeatherDevices"/>
+    <owl:disjointWith rdf:resource="#Switches"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#DeviceConsumeEnergy"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Time">
+    <owl:disjointWith rdf:resource="#Zone"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Dishwasher">
+    <owl:disjointWith rdf:resource="#Stove"/>
+    <owl:disjointWith rdf:resource="#Refrigerators"/>
+    <owl:disjointWith rdf:resource="#Oven"/>
+    <owl:disjointWith rdf:resource="#ElectricWaterBoiler"/>
+    <rdfs:subClassOf rdf:resource="#KetchinDevices"/>
+  </owl:Class>
+  <owl:Class rdf:about="#DeviceConsumeEnergy">
+    <rdfs:subClassOf rdf:resource="#Devices"/>
+    <owl:disjointWith rdf:resource="#DeviceProductEnergy"/>
+  </owl:Class>
+  <owl:Class rdf:ID="HouseWork">
+    <rdfs:subClassOf rdf:resource="#InferredActivity"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Activity">
+    <owl:disjointWith rdf:resource="#Human"/>
+    <owl:disjointWith rdf:resource="#Service"/>
+    <owl:disjointWith rdf:resource="#Time"/>
+    <owl:disjointWith rdf:resource="#Environment"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Events"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Zone"/>
+    <owl:disjointWith rdf:resource="#Behaviors"/>
+    <owl:disjointWith rdf:resource="#Devices"/>
+    <owl:disjointWith rdf:resource="#Home"/>
+  </owl:Class>
+  <owl:Class rdf:ID="NotifyApplication">
+    <rdfs:subClassOf rdf:resource="#NotificationActions"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Bedroom">
+    <owl:disjointWith rdf:resource="#wc"/>
+    <owl:disjointWith rdf:resource="#room"/>
+    <owl:disjointWith rdf:resource="#LevingRoom"/>
+    <owl:disjointWith rdf:resource="#Landing"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#KidsRoom"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#DenningRoom"/>
+    <rdfs:subClassOf rdf:resource="#IndoorSpace"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Wall">
+    <rdfs:subClassOf rdf:resource="#Outdoorspace"/>
+  </owl:Class>
+  <owl:Class rdf:about="#CleaningDevices">
+    <rdfs:subClassOf rdf:resource="#DeviceConsumeEnergy"/>
+    <owl:disjointWith rdf:resource="#KetchinDevices"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#BodyCare"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#CeilingFan">
+    <rdfs:subClassOf rdf:resource="#Cooling"/>
+    <owl:disjointWith rdf:resource="#AirConditioner"/>
+    <owl:disjointWith rdf:resource="#WindowFan"/>
+    <owl:disjointWith rdf:resource="#PatioHeater"/>
+  </owl:Class>
+  <owl:Class rdf:about="#BodyCare">
+    <owl:disjointWith rdf:resource="#KetchinDevices"/>
+    <rdfs:subClassOf rdf:resource="#DeviceConsumeEnergy"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SystemTime">
+    <rdfs:subClassOf rdf:resource="#Time"/>
+  </owl:Class>
+  <owl:Class rdf:about="#KidsRoom">
+    <rdfs:subClassOf rdf:resource="#IndoorSpace"/>
+    <owl:disjointWith rdf:resource="#wc"/>
+    <owl:disjointWith rdf:resource="#room"/>
+    <owl:disjointWith rdf:resource="#LevingRoom"/>
+    <owl:disjointWith rdf:resource="#Landing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Entertaining">
+    <rdfs:subClassOf rdf:resource="#InferredActivity"/>
+  </owl:Class>
+  <owl:Class rdf:ID="CentralVacuumCleaner">
+    <rdfs:subClassOf rdf:resource="#CleaningDevices"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#WashingMachine"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#VacuumCleaner"/>
+    <owl:disjointWith rdf:resource="#ThorWashingMachine"/>
+    <owl:disjointWith rdf:resource="#RoboticVacuumCleaner"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Address"/>
+  <owl:Class rdf:about="#Events">
+    <owl:disjointWith rdf:resource="#Zone"/>
+    <owl:disjointWith rdf:resource="#Time"/>
+    <owl:disjointWith rdf:resource="#Service"/>
+    <owl:disjointWith rdf:resource="#Human"/>
+    <owl:disjointWith rdf:resource="#Home"/>
+  </owl:Class>
+  <owl:Class rdf:about="#NetworkCoordinations">
+    <owl:disjointWith rdf:resource="#CleaningDevices"/>
+    <owl:disjointWith rdf:resource="#KetchinDevices"/>
+    <owl:disjointWith rdf:resource="#Security"/>
+    <owl:disjointWith rdf:resource="#Others"/>
+    <owl:disjointWith rdf:resource="#BodyCare"/>
+    <owl:disjointWith rdf:resource="#Sensors"/>
+    <owl:disjointWith rdf:resource="#WeatherDevices"/>
+    <owl:disjointWith rdf:resource="#Switches"/>
+    <rdfs:subClassOf rdf:resource="#DeviceConsumeEnergy"/>
+  </owl:Class>
+  <owl:Class rdf:ID="WatchingTv">
+    <rdfs:subClassOf rdf:resource="#InferredActivity"/>
+  </owl:Class>
+  <owl:Class rdf:ID="BehaviorsTemperatureLike">
+    <rdfs:subClassOf rdf:resource="#CategoriseBehavior"/>
+  </owl:Class>
+  <owl:Class rdf:about="#MicrowaveOven">
+    <rdfs:subClassOf rdf:resource="#BodyCare"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Fear">
+    <rdfs:subClassOf rdf:resource="#State"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Robot">
+    <rdfs:subClassOf rdf:resource="#NonHuman"/>
+  </owl:Class>
+  <owl:Class rdf:about="#WashingMachine">
+    <rdfs:subClassOf rdf:resource="#CleaningDevices"/>
+  </owl:Class>
+  <owl:Class rdf:about="#RainSensor">
+    <rdfs:subClassOf rdf:resource="#Sensors"/>
+    <owl:disjointWith rdf:resource="#WindSensor"/>
+    <owl:disjointWith rdf:resource="#TemperatureSensor"/>
+    <owl:disjointWith rdf:resource="#SmokeSensor"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="Home_Has_Bills">
+    <rdfs:range rdf:resource="#Bills"/>
+    <rdfs:domain rdf:resource="#Home"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="Home_Has_Zones">
+    <rdfs:range rdf:resource="#Zone"/>
+    <rdfs:domain rdf:resource="#Home"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="Human_HasLocation_In_Zone">
+    <rdfs:range rdf:resource="#Zone"/>
+    <rdfs:domain rdf:resource="#Actors"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="Human_Has_Behaviors">
+    <rdfs:domain rdf:resource="#Human"/>
+    <rdfs:range rdf:resource="#Behaviors"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="Home_Has_Address">
+    <rdfs:range rdf:resource="#Address"/>
+    <rdfs:domain rdf:resource="#Home"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="Human_Has_Activity">
+    <rdfs:domain rdf:resource="#Human"/>
+    <rdfs:range rdf:resource="#Activity"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="Activity_Has_Time">
+    <rdfs:range rdf:resource="#Time"/>
+    <rdfs:domain rdf:resource="#Activity"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="Behaviors_Has_Time">
+    <rdfs:range rdf:resource="#Time"/>
+    <rdfs:domain rdf:resource="#Behaviors"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="Activity_Has_Actions">
+    <rdfs:domain rdf:resource="#Activity"/>
+    <rdfs:range rdf:resource="#Actions"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="Zone_Is_Owned_By_Person">
+    <rdfs:domain rdf:resource="#Zone"/>
+    <rdfs:range rdf:resource="#Human"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="Event_Has_Actions">
+    <rdfs:range rdf:resource="#Actions"/>
+    <rdfs:domain rdf:resource="#Events"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="Human_Has_State">
+    <rdfs:domain rdf:resource="#Human"/>
+    <rdfs:range rdf:resource="#State"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="Hehaviors_Has_Actions">
+    <rdfs:domain rdf:resource="#Behaviors"/>
+    <rdfs:range rdf:resource="#Actions"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="Zone_Has_Devices">
+    <rdfs:domain rdf:resource="#Zone"/>
+    <rdfs:range rdf:resource="#Devices"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="Bills_Has_Energy_Sources">
+    <rdfs:range rdf:resource="#EnergySources"/>
+    <rdfs:domain rdf:resource="#Bills"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="Zone_Has_Enirenment">
+    <rdfs:domain rdf:resource="#Zone"/>
+    <rdfs:range rdf:resource="#Environment"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="Action_Effect_In_Devices">
+    <rdfs:domain rdf:resource="#Activity"/>
+    <rdfs:range rdf:resource="#Devices"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="Devices_Has_Services">
+    <rdfs:domain rdf:resource="#Devices"/>
+    <rdfs:range rdf:resource="#Service"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="Event_Has_Time">
+    <rdfs:range rdf:resource="#Time"/>
+    <rdfs:domain rdf:resource="#Events"/>
+  </owl:ObjectProperty>
+  <rdf:Property rdf:about="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <owl:DatatypeProperty rdf:ID="Environment_Values">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="#Environment"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Service_Type">
+    <rdfs:domain rdf:resource="#Service"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Address_County">
+    <rdfs:domain rdf:resource="#Address"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Action_Type">
+    <rdfs:domain rdf:resource="#Actions"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Address_Line_2">
+    <rdfs:domain rdf:resource="#Address"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Behaviors_Percentage_Importance">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Behaviors"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Action_command_List">
+    <rdfs:domain rdf:resource="#Actions"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Time_Hours">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Time"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Events_Level">
+    <rdfs:domain rdf:resource="#Events"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Bills_Name">
+    <rdfs:domain rdf:resource="#Bills"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Service_Name">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Service"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Address_Stat">
+    <rdfs:domain rdf:resource="#Address"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Human_Sex">
+    <rdfs:domain rdf:resource="#Human"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Behaviors_Stat_On_Off">
+    <rdfs:domain rdf:resource="#Behaviors"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Zone_Size">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="#Zone"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Time_Day">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Time"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Environment_Name">
+    <rdfs:domain rdf:resource="#Environment"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Address_Postal_Code">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Address"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Devices_State">
+    <rdfs:domain rdf:resource="#Devices"/>
+    <rdfs:range>
+      <owl:DataRange>
+        <owl:oneOf rdf:parseType="Resource">
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >off</rdf:first>
+          </rdf:rest>
+          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >on</rdf:first>
+        </owl:oneOf>
+      </owl:DataRange>
+    </rdfs:range>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Activity_Name">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Activity"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Behaviors_Name">
+    <rdfs:domain rdf:resource="#Behaviors"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Devices_Name">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Devices"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Human_Last_Name">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Human"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Time_Year">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Time"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Devices_Values">
+    <rdfs:domain rdf:resource="#Devices"/>
+    <rdfs:range>
+      <owl:DataRange>
+        <owl:oneOf rdf:parseType="Resource">
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:rest rdf:parseType="Resource">
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+              >HIGH</rdf:first>
+            </rdf:rest>
+            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MEDIUM</rdf:first>
+          </rdf:rest>
+          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >LOW</rdf:first>
+        </owl:oneOf>
+      </owl:DataRange>
+    </rdfs:range>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Action_Name">
+    <rdfs:domain rdf:resource="#Actions"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Time_Min">
+    <rdfs:domain rdf:resource="#Time"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Time_Second">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Time"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Adress_GPS_Location">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Address"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Service_Values">
+    <rdfs:domain rdf:resource="#Service"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="BehaviorsTemperatureVal">
+    <rdfs:domain rdf:resource="#BehaviorsTemperatureLike"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Devices_Kwh_Consuming">
+    <rdfs:domain rdf:resource="#Devices"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Events_Name">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Events"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Zone_Floor">
+    <rdfs:range>
+      <owl:DataRange>
+        <owl:oneOf rdf:parseType="Resource">
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >1</rdf:first>
+            <rdf:rest rdf:parseType="Resource">
+              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+              >2</rdf:first>
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:rest rdf:parseType="Resource">
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                  <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                  >4</rdf:first>
+                </rdf:rest>
+                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >3</rdf:first>
+              </rdf:rest>
+            </rdf:rest>
+          </rdf:rest>
+          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+          >0</rdf:first>
+        </owl:oneOf>
+      </owl:DataRange>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="#Zone"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Address_Line_1">
+    <rdfs:domain rdf:resource="#Address"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Events_type">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Events"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Human_First_Name">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Human"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Zone_VectoreXY">
+    <rdfs:domain rdf:resource="#Zone"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Activity_Description">
+    <rdfs:domain rdf:resource="#Activity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Time_Type_Am_Pm">
+    <rdfs:domain rdf:resource="#Time"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Activity_Type">
+    <rdfs:domain rdf:resource="#Activity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Behaviors_Description">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Behaviors"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Address_city">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Address"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Home_Number">
+    <rdfs:domain rdf:resource="#Home"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Human_Phone_Number">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Human"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Action_Description">
+    <rdfs:domain rdf:resource="#Actions"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Human_Birthday">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:domain rdf:resource="#Human"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Address_Country">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Address"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Human_Email">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Human"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Zone_Name">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Zone"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Devices_Protocol">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Devices"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Home_Area">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="#Home"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Events_Percentage">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Events"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Bills_Valouse">
+    <rdfs:domain rdf:resource="#Bills"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Zone_Type">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Zone"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Bills_Type">
+    <rdfs:domain rdf:resource="#Bills"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <swrl:Imp rdf:ID="Rule-SleepingMode">
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:BuiltinAtom>
+                    <swrl:arguments>
+                      <rdf:List>
+                        <rdf:rest>
+                          <rdf:List>
+                            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >on</rdf:first>
+                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                          </rdf:List>
+                        </rdf:rest>
+                        <rdf:first>
+                          <swrl:Variable rdf:ID="stat"/>
+                        </rdf:first>
+                      </rdf:List>
+                    </swrl:arguments>
+                    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+                  </swrl:BuiltinAtom>
+                </rdf:first>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:first>
+                      <swrl:DatavaluedPropertyAtom>
+                        <swrl:argument1>
+                          <swrl:Variable rdf:ID="x"/>
+                        </swrl:argument1>
+                        <swrl:argument2>
+                          <swrl:Variable rdf:ID="val"/>
+                        </swrl:argument2>
+                        <swrl:propertyPredicate rdf:resource="#Devices_Values"/>
+                      </swrl:DatavaluedPropertyAtom>
+                    </rdf:first>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:first>
+                          <swrl:BuiltinAtom>
+                            <swrl:arguments>
+                              <rdf:List>
+                                <rdf:first rdf:resource="#val"/>
+                                <rdf:rest>
+                                  <rdf:List>
+                                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                                    >0</rdf:first>
+                                  </rdf:List>
+                                </rdf:rest>
+                              </rdf:List>
+                            </swrl:arguments>
+                            <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+                          </swrl:BuiltinAtom>
+                        </rdf:first>
+                        <rdf:rest>
+                          <swrl:AtomList>
+                            <rdf:rest>
+                              <swrl:AtomList>
+                                <rdf:rest>
+                                  <swrl:AtomList>
+                                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    <rdf:first>
+                                      <swrl:DifferentIndividualsAtom>
+                                        <swrl:argument2 rdf:resource="#x"/>
+                                        <swrl:argument1 rdf:resource="#NetworkCoordinations"/>
+                                      </swrl:DifferentIndividualsAtom>
+                                    </rdf:first>
+                                  </swrl:AtomList>
+                                </rdf:rest>
+                                <rdf:first>
+                                  <swrl:DifferentIndividualsAtom>
+                                    <swrl:argument1 rdf:resource="#Refrigerators"/>
+                                    <swrl:argument2 rdf:resource="#x"/>
+                                  </swrl:DifferentIndividualsAtom>
+                                </rdf:first>
+                              </swrl:AtomList>
+                            </rdf:rest>
+                            <rdf:first>
+                              <swrl:ClassAtom>
+                                <swrl:argument1 rdf:resource="#x"/>
+                                <swrl:classPredicate rdf:resource="#DeviceConsumeEnergy"/>
+                              </swrl:ClassAtom>
+                            </rdf:first>
+                          </swrl:AtomList>
+                        </rdf:rest>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                  </swrl:AtomList>
+                </rdf:rest>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:DatavaluedPropertyAtom>
+                <swrl:argument2 rdf:resource="#stat"/>
+                <swrl:argument1 rdf:resource="#x"/>
+                <swrl:propertyPredicate rdf:resource="#Devices_State"/>
+              </swrl:DatavaluedPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1 rdf:resource="#x"/>
+            <swrl:classPredicate rdf:resource="#MovingSensor"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:body>
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first>
+          <swrl:DatavaluedPropertyAtom>
+            <swrl:propertyPredicate rdf:resource="#Devices_State"/>
+            <swrl:argument1 rdf:resource="#x"/>
+            <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >on</swrl:argument2>
+          </swrl:DatavaluedPropertyAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:head>
+  </swrl:Imp>
+  <swrl:Imp rdf:ID="Rule-TurnLightsOff">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:DatavaluedPropertyAtom>
+            <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >on</swrl:argument2>
+            <swrl:argument1>
+              <swrl:Variable rdf:ID="L"/>
+            </swrl:argument1>
+            <swrl:propertyPredicate rdf:resource="#Devices_State"/>
+          </swrl:DatavaluedPropertyAtom>
+        </rdf:first>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:classPredicate rdf:resource="#MovingSensor"/>
+            <swrl:argument1>
+              <swrl:Variable rdf:ID="m"/>
+            </swrl:argument1>
+          </swrl:ClassAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:DatavaluedPropertyAtom>
+                <swrl:propertyPredicate rdf:resource="#Devices_State"/>
+                <swrl:argument2 rdf:resource="#stat"/>
+                <swrl:argument1 rdf:resource="#m"/>
+              </swrl:DatavaluedPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:BuiltinAtom>
+                    <swrl:arguments>
+                      <rdf:List>
+                        <rdf:rest>
+                          <rdf:List>
+                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >on</rdf:first>
+                          </rdf:List>
+                        </rdf:rest>
+                        <rdf:first rdf:resource="#stat"/>
+                      </rdf:List>
+                    </swrl:arguments>
+                    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+                  </swrl:BuiltinAtom>
+                </rdf:first>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:rest>
+                          <swrl:AtomList>
+                            <rdf:first>
+                              <swrl:IndividualPropertyAtom>
+                                <swrl:argument1>
+                                  <swrl:Variable rdf:ID="z"/>
+                                </swrl:argument1>
+                                <swrl:argument2 rdf:resource="#m"/>
+                                <swrl:propertyPredicate rdf:resource="#Zone_Has_Devices"/>
+                              </swrl:IndividualPropertyAtom>
+                            </rdf:first>
+                            <rdf:rest>
+                              <swrl:AtomList>
+                                <rdf:first>
+                                  <swrl:ClassAtom>
+                                    <swrl:classPredicate rdf:resource="#Human"/>
+                                    <swrl:argument1>
+                                      <swrl:Variable rdf:ID="h"/>
+                                    </swrl:argument1>
+                                  </swrl:ClassAtom>
+                                </rdf:first>
+                                <rdf:rest>
+                                  <swrl:AtomList>
+                                    <rdf:rest>
+                                      <swrl:AtomList>
+                                        <rdf:first>
+                                          <swrl:IndividualPropertyAtom>
+                                            <swrl:argument2 rdf:resource="#L"/>
+                                            <swrl:argument1 rdf:resource="#z"/>
+                                            <swrl:propertyPredicate rdf:resource="#Zone_Has_Devices"/>
+                                          </swrl:IndividualPropertyAtom>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                          <swrl:AtomList>
+                                            <rdf:first>
+                                              <swrl:ClassAtom>
+                                                <swrl:argument1 rdf:resource="#L"/>
+                                                <swrl:classPredicate rdf:resource="#Lights"/>
+                                              </swrl:ClassAtom>
+                                            </rdf:first>
+                                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                          </swrl:AtomList>
+                                        </rdf:rest>
+                                      </swrl:AtomList>
+                                    </rdf:rest>
+                                    <rdf:first>
+                                      <swrl:IndividualPropertyAtom>
+                                        <swrl:argument1 rdf:resource="#h"/>
+                                        <swrl:propertyPredicate rdf:resource="#Human_HasLocation_In_Zone"/>
+                                        <swrl:argument2 rdf:resource="#z"/>
+                                      </swrl:IndividualPropertyAtom>
+                                    </rdf:first>
+                                  </swrl:AtomList>
+                                </rdf:rest>
+                              </swrl:AtomList>
+                            </rdf:rest>
+                          </swrl:AtomList>
+                        </rdf:rest>
+                        <rdf:first>
+                          <swrl:BuiltinAtom>
+                            <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                            <swrl:arguments>
+                              <rdf:List>
+                                <rdf:first rdf:resource="#val"/>
+                                <rdf:rest>
+                                  <rdf:List>
+                                    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                                    >0</rdf:first>
+                                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                  </rdf:List>
+                                </rdf:rest>
+                              </rdf:List>
+                            </swrl:arguments>
+                          </swrl:BuiltinAtom>
+                        </rdf:first>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                    <rdf:first>
+                      <swrl:DatavaluedPropertyAtom>
+                        <swrl:argument2 rdf:resource="#val"/>
+                        <swrl:argument1 rdf:resource="#m"/>
+                        <swrl:propertyPredicate rdf:resource="#Devices_Values"/>
+                      </swrl:DatavaluedPropertyAtom>
+                    </rdf:first>
+                  </swrl:AtomList>
+                </rdf:rest>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+  <swrl:Imp rdf:ID="Rule-Activity-control">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            <rdf:first>
+              <swrl:ClassAtom>
+                <swrl:classPredicate rdf:resource="#NotifyApplication"/>
+                <swrl:argument1>
+                  <swrl:Variable rdf:ID="a"/>
+                </swrl:argument1>
+              </swrl:ClassAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1>
+              <swrl:Variable rdf:ID="e"/>
+            </swrl:argument1>
+            <swrl:classPredicate rdf:resource="#SendEmail"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:classPredicate rdf:resource="#Activity"/>
+            <swrl:argument1 rdf:resource="#a"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:rest>
+                          <swrl:AtomList>
+                            <rdf:first>
+                              <swrl:IndividualPropertyAtom>
+                                <swrl:argument1 rdf:resource="#h"/>
+                                <swrl:argument2 rdf:resource="#a"/>
+                                <swrl:propertyPredicate rdf:resource="#Human_Has_Activity"/>
+                              </swrl:IndividualPropertyAtom>
+                            </rdf:first>
+                            <rdf:rest>
+                              <swrl:AtomList>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                <rdf:first>
+                                  <swrl:DatavaluedPropertyAtom>
+                                    <swrl:propertyPredicate rdf:resource="#Human_Email"/>
+                                    <swrl:argument2 rdf:resource="#e"/>
+                                    <swrl:argument1 rdf:resource="#h"/>
+                                  </swrl:DatavaluedPropertyAtom>
+                                </rdf:first>
+                              </swrl:AtomList>
+                            </rdf:rest>
+                          </swrl:AtomList>
+                        </rdf:rest>
+                        <rdf:first>
+                          <swrl:BuiltinAtom>
+                            <swrl:arguments>
+                              <rdf:List>
+                                <rdf:first>
+                                  <swrl:Variable rdf:ID="c"/>
+                                </rdf:first>
+                                <rdf:rest>
+                                  <rdf:List>
+                                    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                                    >4</rdf:first>
+                                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                  </rdf:List>
+                                </rdf:rest>
+                              </rdf:List>
+                            </swrl:arguments>
+                            <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                          </swrl:BuiltinAtom>
+                        </rdf:first>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                    <rdf:first>
+                      <swrl:BuiltinAtom>
+                        <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#count"/>
+                        <swrl:arguments>
+                          <rdf:List>
+                            <rdf:rest>
+                              <rdf:List>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                <rdf:first rdf:resource="#c"/>
+                              </rdf:List>
+                            </rdf:rest>
+                            <rdf:first>
+                              <swrl:Variable rdf:ID="d"/>
+                            </rdf:first>
+                          </rdf:List>
+                        </swrl:arguments>
+                      </swrl:BuiltinAtom>
+                    </rdf:first>
+                  </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                  <swrl:IndividualPropertyAtom>
+                    <swrl:propertyPredicate rdf:resource="#Action_Effect_In_Devices"/>
+                    <swrl:argument2 rdf:resource="#d"/>
+                    <swrl:argument1>
+                      <swrl:Variable rdf:ID="ac"/>
+                    </swrl:argument1>
+                  </swrl:IndividualPropertyAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:propertyPredicate rdf:resource="#Activity_Has_Actions"/>
+                <swrl:argument2 rdf:resource="#ac"/>
+                <swrl:argument1 rdf:resource="#a"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+  <swrl:Imp rdf:ID="Rule-Temperature-Heating">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:DatavaluedPropertyAtom>
+            <swrl:propertyPredicate rdf:resource="#Devices_State"/>
+            <swrl:argument1 rdf:resource="#h"/>
+            <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >off</swrl:argument2>
+          </swrl:DatavaluedPropertyAtom>
+        </rdf:first>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:rest>
+                          <swrl:AtomList>
+                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            <rdf:first>
+                              <swrl:IndividualPropertyAtom>
+                                <swrl:argument2 rdf:resource="#h"/>
+                                <swrl:argument1 rdf:resource="#z"/>
+                                <swrl:propertyPredicate rdf:resource="#Zone_Has_Devices"/>
+                              </swrl:IndividualPropertyAtom>
+                            </rdf:first>
+                          </swrl:AtomList>
+                        </rdf:rest>
+                        <rdf:first>
+                          <swrl:ClassAtom>
+                            <swrl:argument1 rdf:resource="#h"/>
+                            <swrl:classPredicate rdf:resource="#Heating"/>
+                          </swrl:ClassAtom>
+                        </rdf:first>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                    <rdf:first>
+                      <swrl:IndividualPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="#Zone_Has_Devices"/>
+                        <swrl:argument2>
+                          <swrl:Variable rdf:ID="t"/>
+                        </swrl:argument2>
+                        <swrl:argument1 rdf:resource="#z"/>
+                      </swrl:IndividualPropertyAtom>
+                    </rdf:first>
+                  </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                  <swrl:BuiltinAtom>
+                    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                    <swrl:arguments>
+                      <rdf:List>
+                        <rdf:first rdf:resource="#val"/>
+                        <rdf:rest>
+                          <rdf:List>
+                            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                            >25</rdf:first>
+                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                          </rdf:List>
+                        </rdf:rest>
+                      </rdf:List>
+                    </swrl:arguments>
+                  </swrl:BuiltinAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:DatavaluedPropertyAtom>
+                <swrl:propertyPredicate rdf:resource="#Devices_Values"/>
+                <swrl:argument1 rdf:resource="#t"/>
+                <swrl:argument2 rdf:resource="#val"/>
+              </swrl:DatavaluedPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1 rdf:resource="#t"/>
+            <swrl:classPredicate rdf:resource="#TemperatureSensor"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+  <swrl:AtomList/>
+  <swrl:Imp rdf:ID="Rule-Run-Activity">
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:classPredicate rdf:resource="#Activity"/>
+            <swrl:argument1 rdf:resource="#a"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument2>
+                  <swrl:Variable rdf:ID="time"/>
+                </swrl:argument2>
+                <swrl:argument1 rdf:resource="#a"/>
+                <swrl:propertyPredicate rdf:resource="#Activity_Has_Time"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:ClassAtom>
+                    <swrl:argument1>
+                      <swrl:Variable rdf:ID="sT"/>
+                    </swrl:argument1>
+                    <swrl:classPredicate rdf:resource="#SystemTime"/>
+                  </swrl:ClassAtom>
+                </rdf:first>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:first>
+                      <swrl:BuiltinAtom>
+                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+                        <swrl:arguments>
+                          <rdf:List>
+                            <rdf:rest>
+                              <rdf:List>
+                                <rdf:first>
+                                  <swrl:Variable rdf:ID="st"/>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                              </rdf:List>
+                            </rdf:rest>
+                            <rdf:first rdf:resource="#time"/>
+                          </rdf:List>
+                        </swrl:arguments>
+                      </swrl:BuiltinAtom>
+                    </rdf:first>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:rest>
+                          <swrl:AtomList>
+                            <rdf:first>
+                              <swrl:IndividualPropertyAtom>
+                                <swrl:propertyPredicate rdf:resource="#Action_Effect_In_Devices"/>
+                                <swrl:argument1 rdf:resource="#ac"/>
+                                <swrl:argument2 rdf:resource="#d"/>
+                              </swrl:IndividualPropertyAtom>
+                            </rdf:first>
+                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                          </swrl:AtomList>
+                        </rdf:rest>
+                        <rdf:first>
+                          <swrl:IndividualPropertyAtom>
+                            <swrl:propertyPredicate rdf:resource="#Activity_Has_Actions"/>
+                            <swrl:argument1 rdf:resource="#a"/>
+                            <swrl:argument2 rdf:resource="#ac"/>
+                          </swrl:IndividualPropertyAtom>
+                        </rdf:first>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                  </swrl:AtomList>
+                </rdf:rest>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:body>
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:DatavaluedPropertyAtom>
+            <swrl:argument1 rdf:resource="#d"/>
+            <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >on</swrl:argument2>
+            <swrl:propertyPredicate rdf:resource="#Devices_State"/>
+          </swrl:DatavaluedPropertyAtom>
+        </rdf:first>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </swrl:AtomList>
+    </swrl:head>
+  </swrl:Imp>
+  <swrl:AtomList/>
+  <swrl:Imp rdf:ID="Rule-BehaviorsTemperatureLike">
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:argument1 rdf:resource="#z"/>
+            <swrl:propertyPredicate rdf:resource="#Zone_Is_Owned_By_Person"/>
+            <swrl:argument2 rdf:resource="#h"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:ClassAtom>
+                <swrl:classPredicate rdf:resource="#Human"/>
+                <swrl:argument1 rdf:resource="#h"/>
+              </swrl:ClassAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:IndividualPropertyAtom>
+                    <swrl:argument2 rdf:resource="#t"/>
+                    <swrl:argument1 rdf:resource="#z"/>
+                    <swrl:propertyPredicate rdf:resource="#Zone_Has_Devices"/>
+                  </swrl:IndividualPropertyAtom>
+                </rdf:first>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:first>
+                          <swrl:DatavaluedPropertyAtom>
+                            <swrl:propertyPredicate rdf:resource="#Devices_Values"/>
+                            <swrl:argument1 rdf:resource="#t"/>
+                            <swrl:argument2>
+                              <swrl:Variable rdf:ID="val1"/>
+                            </swrl:argument2>
+                          </swrl:DatavaluedPropertyAtom>
+                        </rdf:first>
+                        <rdf:rest>
+                          <swrl:AtomList>
+                            <rdf:first>
+                              <swrl:IndividualPropertyAtom>
+                                <swrl:propertyPredicate rdf:resource="#Human_Has_Behaviors"/>
+                                <swrl:argument1 rdf:resource="#h"/>
+                                <swrl:argument2>
+                                  <swrl:Variable rdf:ID="b"/>
+                                </swrl:argument2>
+                              </swrl:IndividualPropertyAtom>
+                            </rdf:first>
+                            <rdf:rest>
+                              <swrl:AtomList>
+                                <rdf:first>
+                                  <swrl:ClassAtom>
+                                    <swrl:argument1 rdf:resource="#b"/>
+                                    <swrl:classPredicate rdf:resource="#BehaviorsTemperatureLike"/>
+                                  </swrl:ClassAtom>
+                                </rdf:first>
+                                <rdf:rest>
+                                  <swrl:AtomList>
+                                    <rdf:first>
+                                      <swrl:DatavaluedPropertyAtom>
+                                        <swrl:argument2>
+                                          <swrl:Variable rdf:ID="val2"/>
+                                        </swrl:argument2>
+                                        <swrl:argument1 rdf:resource="#b"/>
+                                        <swrl:propertyPredicate rdf:resource="#BehaviorsTemperatureVal"/>
+                                      </swrl:DatavaluedPropertyAtom>
+                                    </rdf:first>
+                                    <rdf:rest>
+                                      <swrl:AtomList>
+                                        <rdf:rest>
+                                          <swrl:AtomList>
+                                            <rdf:first>
+                                              <swrl:IndividualPropertyAtom>
+                                                <swrl:argument1 rdf:resource="#z"/>
+                                                <swrl:argument2 rdf:resource="#c"/>
+                                                <swrl:propertyPredicate rdf:resource="#Zone_Has_Devices"/>
+                                              </swrl:IndividualPropertyAtom>
+                                            </rdf:first>
+                                            <rdf:rest>
+                                              <swrl:AtomList>
+                                                <rdf:first>
+                                                  <swrl:ClassAtom>
+                                                    <swrl:classPredicate rdf:resource="#Cooling"/>
+                                                    <swrl:argument1 rdf:resource="#c"/>
+                                                  </swrl:ClassAtom>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                              </swrl:AtomList>
+                                            </rdf:rest>
+                                          </swrl:AtomList>
+                                        </rdf:rest>
+                                        <rdf:first>
+                                          <swrl:BuiltinAtom>
+                                            <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                            <swrl:arguments>
+                                              <rdf:List>
+                                                <rdf:rest>
+                                                  <rdf:List>
+                                                    <rdf:first rdf:resource="#val2"/>
+                                                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                  </rdf:List>
+                                                </rdf:rest>
+                                                <rdf:first rdf:resource="#val1"/>
+                                              </rdf:List>
+                                            </swrl:arguments>
+                                          </swrl:BuiltinAtom>
+                                        </rdf:first>
+                                      </swrl:AtomList>
+                                    </rdf:rest>
+                                  </swrl:AtomList>
+                                </rdf:rest>
+                              </swrl:AtomList>
+                            </rdf:rest>
+                          </swrl:AtomList>
+                        </rdf:rest>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                    <rdf:first>
+                      <swrl:ClassAtom>
+                        <swrl:argument1 rdf:resource="#t"/>
+                        <swrl:classPredicate rdf:resource="#TemperatureSensor"/>
+                      </swrl:ClassAtom>
+                    </rdf:first>
+                  </swrl:AtomList>
+                </rdf:rest>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:body>
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:DatavaluedPropertyAtom>
+            <swrl:argument1 rdf:resource="#c"/>
+            <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >on</swrl:argument2>
+            <swrl:propertyPredicate rdf:resource="#Devices_State"/>
+          </swrl:DatavaluedPropertyAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:DatavaluedPropertyAtom>
+                <swrl:argument2 rdf:resource="#val2"/>
+                <swrl:argument1 rdf:resource="#c"/>
+                <swrl:propertyPredicate rdf:resource="#Devices_Values"/>
+              </swrl:DatavaluedPropertyAtom>
+            </rdf:first>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:head>
+  </swrl:Imp>
+  <swrl:Imp rdf:ID="Rule-Temperature-Cooling">
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1 rdf:resource="#t"/>
+            <swrl:classPredicate rdf:resource="#TemperatureSensor"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:rest>
+                          <swrl:AtomList>
+                            <rdf:first>
+                              <swrl:IndividualPropertyAtom>
+                                <swrl:propertyPredicate rdf:resource="#Zone_Has_Devices"/>
+                                <swrl:argument1 rdf:resource="#z"/>
+                                <swrl:argument2 rdf:resource="#c"/>
+                              </swrl:IndividualPropertyAtom>
+                            </rdf:first>
+                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                          </swrl:AtomList>
+                        </rdf:rest>
+                        <rdf:first>
+                          <swrl:ClassAtom>
+                            <swrl:classPredicate rdf:resource="#Cooling"/>
+                            <swrl:argument1 rdf:resource="#c"/>
+                          </swrl:ClassAtom>
+                        </rdf:first>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                    <rdf:first>
+                      <swrl:IndividualPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="#Zone_Has_Devices"/>
+                        <swrl:argument1 rdf:resource="#z"/>
+                        <swrl:argument2 rdf:resource="#t"/>
+                      </swrl:IndividualPropertyAtom>
+                    </rdf:first>
+                  </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                  <swrl:BuiltinAtom>
+                    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                    <swrl:arguments>
+                      <rdf:List>
+                        <rdf:first rdf:resource="#val"/>
+                        <rdf:rest>
+                          <rdf:List>
+                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                            >25</rdf:first>
+                          </rdf:List>
+                        </rdf:rest>
+                      </rdf:List>
+                    </swrl:arguments>
+                  </swrl:BuiltinAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:DatavaluedPropertyAtom>
+                <swrl:argument1 rdf:resource="#t"/>
+                <swrl:argument2 rdf:resource="#val"/>
+                <swrl:propertyPredicate rdf:resource="#Devices_Values"/>
+              </swrl:DatavaluedPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:body>
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first>
+          <swrl:DatavaluedPropertyAtom>
+            <swrl:propertyPredicate rdf:resource="#Devices_State"/>
+            <swrl:argument1 rdf:resource="#c"/>
+            <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >off</swrl:argument2>
+          </swrl:DatavaluedPropertyAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:head>
+  </swrl:Imp>
+  <swrl:Imp rdf:ID="Rule-bills-notify">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            <rdf:first>
+              <swrl:ClassAtom>
+                <swrl:argument1>
+                  <swrl:Variable rdf:ID="p"/>
+                </swrl:argument1>
+                <swrl:classPredicate rdf:resource="#SendSms"/>
+              </swrl:ClassAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1 rdf:resource="#e"/>
+            <swrl:classPredicate rdf:resource="#SendEmail"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:classPredicate rdf:resource="#Bills"/>
+            <swrl:argument1 rdf:resource="#b"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:BuiltinAtom>
+                    <swrl:arguments>
+                      <rdf:List>
+                        <rdf:first>
+                          <swrl:Variable rdf:ID="id"/>
+                        </rdf:first>
+                        <rdf:rest>
+                          <rdf:List>
+                            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >GridBill</rdf:first>
+                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                          </rdf:List>
+                        </rdf:rest>
+                      </rdf:List>
+                    </swrl:arguments>
+                    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+                  </swrl:BuiltinAtom>
+                </rdf:first>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:first>
+                          <swrl:BuiltinAtom>
+                            <swrl:arguments>
+                              <rdf:List>
+                                <rdf:first rdf:resource="#val"/>
+                                <rdf:rest>
+                                  <rdf:List>
+                                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                                    >5000</rdf:first>
+                                  </rdf:List>
+                                </rdf:rest>
+                              </rdf:List>
+                            </swrl:arguments>
+                            <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                          </swrl:BuiltinAtom>
+                        </rdf:first>
+                        <rdf:rest>
+                          <swrl:AtomList>
+                            <rdf:rest>
+                              <swrl:AtomList>
+                                <rdf:first>
+                                  <swrl:DatavaluedPropertyAtom>
+                                    <swrl:propertyPredicate rdf:resource="#Human_Email"/>
+                                    <swrl:argument1 rdf:resource="#h"/>
+                                    <swrl:argument2 rdf:resource="#e"/>
+                                  </swrl:DatavaluedPropertyAtom>
+                                </rdf:first>
+                                <rdf:rest>
+                                  <swrl:AtomList>
+                                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    <rdf:first>
+                                      <swrl:DatavaluedPropertyAtom>
+                                        <swrl:propertyPredicate rdf:resource="#Human_Phone_Number"/>
+                                        <swrl:argument2 rdf:resource="#p"/>
+                                        <swrl:argument1 rdf:resource="#h"/>
+                                      </swrl:DatavaluedPropertyAtom>
+                                    </rdf:first>
+                                  </swrl:AtomList>
+                                </rdf:rest>
+                              </swrl:AtomList>
+                            </rdf:rest>
+                            <rdf:first>
+                              <swrl:ClassAtom>
+                                <swrl:classPredicate rdf:resource="#Human"/>
+                                <swrl:argument1 rdf:resource="#h"/>
+                              </swrl:ClassAtom>
+                            </rdf:first>
+                          </swrl:AtomList>
+                        </rdf:rest>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                    <rdf:first>
+                      <swrl:DatavaluedPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="#Bills_Valouse"/>
+                        <swrl:argument2 rdf:resource="#val"/>
+                        <swrl:argument1 rdf:resource="#b"/>
+                      </swrl:DatavaluedPropertyAtom>
+                    </rdf:first>
+                  </swrl:AtomList>
+                </rdf:rest>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:DatavaluedPropertyAtom>
+                <swrl:argument1 rdf:resource="#b"/>
+                <swrl:argument2 rdf:resource="#id"/>
+                <swrl:propertyPredicate rdf:resource="#Bills_Name"/>
+              </swrl:DatavaluedPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+  <swrl:Imp rdf:ID="Rule-TrunLightsOn">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:DatavaluedPropertyAtom>
+            <swrl:propertyPredicate rdf:resource="#Devices_State"/>
+            <swrl:argument1>
+              <swrl:Variable rdf:ID="l"/>
+            </swrl:argument1>
+            <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >on</swrl:argument2>
+          </swrl:DatavaluedPropertyAtom>
+        </rdf:first>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:classPredicate rdf:resource="#MovingSensor"/>
+            <swrl:argument1 rdf:resource="#x"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:DatavaluedPropertyAtom>
+                <swrl:argument1 rdf:resource="#x"/>
+                <swrl:propertyPredicate rdf:resource="#Devices_State"/>
+                <swrl:argument2 rdf:resource="#stat"/>
+              </swrl:DatavaluedPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:BuiltinAtom>
+                    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+                    <swrl:arguments>
+                      <rdf:List>
+                        <rdf:first rdf:resource="#stat"/>
+                        <rdf:rest>
+                          <rdf:List>
+                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >on</rdf:first>
+                          </rdf:List>
+                        </rdf:rest>
+                      </rdf:List>
+                    </swrl:arguments>
+                  </swrl:BuiltinAtom>
+                </rdf:first>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:first>
+                      <swrl:DatavaluedPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="#Devices_Values"/>
+                        <swrl:argument2 rdf:resource="#val"/>
+                        <swrl:argument1 rdf:resource="#x"/>
+                      </swrl:DatavaluedPropertyAtom>
+                    </rdf:first>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:first>
+                          <swrl:BuiltinAtom>
+                            <swrl:arguments>
+                              <rdf:List>
+                                <rdf:first rdf:resource="#val"/>
+                                <rdf:rest>
+                                  <rdf:List>
+                                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                                    >0</rdf:first>
+                                  </rdf:List>
+                                </rdf:rest>
+                              </rdf:List>
+                            </swrl:arguments>
+                            <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+                          </swrl:BuiltinAtom>
+                        </rdf:first>
+                        <rdf:rest>
+                          <swrl:AtomList>
+                            <rdf:rest>
+                              <swrl:AtomList>
+                                <rdf:rest>
+                                  <swrl:AtomList>
+                                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    <rdf:first>
+                                      <swrl:ClassAtom>
+                                        <swrl:classPredicate rdf:resource="#Lights"/>
+                                        <swrl:argument1 rdf:resource="#l"/>
+                                      </swrl:ClassAtom>
+                                    </rdf:first>
+                                  </swrl:AtomList>
+                                </rdf:rest>
+                                <rdf:first>
+                                  <swrl:IndividualPropertyAtom>
+                                    <swrl:propertyPredicate rdf:resource="#Zone_Has_Devices"/>
+                                    <swrl:argument2 rdf:resource="#l"/>
+                                    <swrl:argument1 rdf:resource="#z"/>
+                                  </swrl:IndividualPropertyAtom>
+                                </rdf:first>
+                              </swrl:AtomList>
+                            </rdf:rest>
+                            <rdf:first>
+                              <swrl:IndividualPropertyAtom>
+                                <swrl:propertyPredicate rdf:resource="#Zone_Has_Devices"/>
+                                <swrl:argument1 rdf:resource="#z"/>
+                                <swrl:argument2 rdf:resource="#x"/>
+                              </swrl:IndividualPropertyAtom>
+                            </rdf:first>
+                          </swrl:AtomList>
+                        </rdf:rest>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                  </swrl:AtomList>
+                </rdf:rest>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.5, Build 663)  http://protege.stanford.edu -->

@@ -1,0 +1,7 @@
+<Map> <Map Nane> <Map Img>
+<Zone> <Class Zone> <Zone id> <ZoneName> <Zone Pos> <zone light id >  <light vall> <Lighttemp id> <temp vall>
+<Actors> <Class Actor> <Name Actor id>  <OwndataProperty 1 > <...> <OwndataProperty n> <State>  <HasLocation_In_Zone> <Zone Oner> 
+<Devices> <Class Device> <Dvice id>  <OwndataProperty 1 > <...> <OwndataProperty n> <Zone in>
+<Time> <Time id > <time vall>
+<Activity> <Activity name> <acivity decration> <Activity type> <activity time> <activity action> 
+<Action> <action name>  <devices.....>
