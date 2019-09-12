@@ -1,0 +1,8 @@
+Bathroom
+Bedroom
+denningroom
+hall
+kitchen
+levingroom
+patio
+room
