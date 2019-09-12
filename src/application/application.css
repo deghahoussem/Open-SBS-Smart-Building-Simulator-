@@ -1,0 +1,123 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+#topPane{
+	 -fx-background-color:  linear-gradient(lightgray,white);
+            -fx-border-color: gray;
+}
+#buttomPane{
+	 -fx-background-color:  linear-gradient(white,lightgray);
+            -fx-border-color: gray;
+}
+#senqrio{
+	 -fx-background-color:  linear-gradient(green,lightgray);
+            -fx-border-color: red;
+}
+#leftPane{
+	 -fx-background-color:  linear-gradient(lightgray,white);
+            -fx-border-color: gray;
+}
+#rightPane{
+	 -fx-background-color:  linear-gradient(lightgray,white);
+            -fx-border-color: gray;
+}
+#mainPane{
+
+}
+#Pane{
+
+            -fx-border-color: gray;
+}
+#Button_Top{
+
+	-fx-font-size: 14px;
+    -fx-font-family: "Arial ";
+
+    -fx-fill: #000022;
+}
+#logo {
+	-fx-font-size: 34px;
+    -fx-font-family: "Arial ";
+    -fx-fill: darkgray;
+    -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 1 );
+    -fx-fill:  linear-gradient(#ccc,white);
+}
+#Text {
+	-fx-font-size: 14px;
+    -fx-font-family: "Arial ";
+   -fx-fill: #888888;
+
+}
+	#Toplogo{
+		 -fx-background-color:  linear-gradient(#2EFEF7,#F2F2F2 );
+	}
+
+#ObjectName{
+	   -fx-fill: blue;
+
+}
+
+#Objectind{
+	-fx-background-color: #EEEEFF;
+	-fx-border-color: #9999FF;
+}
+#Menu_Bar_Buttoms{
+
+}
+#TextBig{
+-fx-font-size: 14px;
+    -fx-font-family: "Arial ";
+  
+}
+#Activity_Vbox{
+	-fx-border-color: gray;
+
+}
+#addScenario{
+
+         -fx-background-color:  linear-gradient(#2EFEF7,#F2F2F2 );
+}
+#toolbarContainer {
+    	    -fx-background-color:
+    	        linear-gradient(#ccc 0%, #ccc 24%,
+    	        #ccc 15%, #ccc 100%),
+    	        linear-gradient(#bdbfc1 0%, #ccc 14%,
+    	        #ccc 15%, #838686 100%),
+    	        linear-gradient(#eef1f6 0%, #ccc 14%,
+    	        #ccc 15%, #eef4f4 74%,
+    	        #eef1f6 79%, #2EFEF7 100%);
+
+    	    -fx-background-insets: 1 0 1 1, 1, 2;
+
+    	    -fx-padding: 4 8 0 8;
+
+    	}
+
+
+.default-color0.chart-bar { -fx-bar-fill: red; }
+.default-color3.chart-bar { -fx-bar-fill: Blue; }
+.default-color2.chart-bar { -fx-bar-fill: yellow; }
+.default-color1.chart-bar { -fx-bar-fill: green; }
+
+
+.default-color2.chart-bar{ -fx-stroke: yellow; }
+.default-color1.chart-bar { -fx-stroke: green; }
+.default-color3.chart-bar{ -fx-stroke: Blue; }
+.default-color0.chart-bar{ -fx-stroke: red; }
+
+
+
+
+.default-color2.chart-series-area-line { -fx-stroke: yellow; }
+.default-color1.chart-series-area-line { -fx-stroke: green; }
+.default-color3.chart-series-area-line { -fx-stroke: Blue; }
+.default-color0.chart-series-area-line { -fx-stroke: red; }
+
+
+ .default-color2.chart-series-area-fill { -fx-fill: #ffffcc; -fx-opacity: 0.2}
+.default-color0.chart-series-area-fill { -fx-fill: #FFaaaa; -fx-opacity: 0.2}
+.default-color1.chart-series-area-fill { -fx-fill: #aaffaa; -fx-opacity: 0.2 }
+.default-color3.chart-series-area-fill { -fx-fill: #66ffff; -fx-opacity: 0.2 }
+
+.default-color2.chart-area-symbol { -fx-background-color: yellow, #ffffff; }
+.default-color0.chart-area-symbol { -fx-background-color: red, #ffffff; }
+.default-color3.chart-area-symbol { -fx-background-color: Blue, #ffffff; }
+.default-color1.chart-area-symbol { -fx-background-color: green, #ffffff; }
